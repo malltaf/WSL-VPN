@@ -5,7 +5,8 @@ Solving the problem of the availability of the Internet and work resources in WS
 When connecting a VPN on Windows OC (using Check Point Virtual Network Adapter in my case) in WSL2 (Ubuntu 20.04.3), access to the Internet and to the workspace via VPN was lost. Other recommendations didn't help (neither at the Windows level, nor at the WSL level).
 
 ## Solution
-First of all, you need to install mtu 1350 inside WSL on eth0
+First, perform all actions with a VPN connected.
+We need to set MTU 1350 inside WSL on eth0:
 ```Shell
 sudo ifconfig eth0 mtu 1350
 ```
