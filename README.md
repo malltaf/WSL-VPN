@@ -17,9 +17,7 @@ Then execute the script in PowerShell:
 $WSL = Get-NetAdapter -Name "vEthernet (WSL)" | where status -eq 'up'
 $VPN = Get-NetAdapter -InterfaceDescription "Check Point Virtual Network Adapter*" | where status -eq 'up' 
 
-# Get interface indexes for 'em and yes I know we will not use WSLifIndex if future.
-# I'll leave unused variable just for my own future purposes.
-$WSLifIndex = $WSL | Select -ExpandProperty "ifIndex"
+# Get interface indexes for 'em
 $VPNifIndex = $VPN | Select -ExpandProperty "ifIndex"
 
 # Get pattern to use in route deletion (VPN activation adds some shit in route table and we need to clean that shit ...)
