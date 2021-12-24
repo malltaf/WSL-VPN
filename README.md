@@ -6,6 +6,7 @@ When connecting a VPN on Windows OC (using Check Point Virtual Network Adapter i
 
 ## Solution
 First, perform all actions with a VPN connected.
+
 We need to set MTU 1350 inside WSL on eth0:
 ```Shell
 sudo ifconfig eth0 mtu 1350
@@ -34,3 +35,6 @@ Get-NetRoute | where { $_.ifIndex -eq $VPNifIndex -and $_.DestinationPrefix -lik
 $WSLIpAddr = wsl hostname -I
 Test-Connection -ComputerName $WSLIpAddr.trim() -Quiet -Count 1
 ```
+After that, everything works.
+
+You can add these scripts to startup. (test)
