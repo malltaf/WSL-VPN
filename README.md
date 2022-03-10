@@ -39,7 +39,7 @@ After that, everything works.
 
 You can add these scripts to startup.
 
-For example, create a trigger in the task scheduler for a vpn connection event:
-Microsoft-Windows-NetworkProfile/Operational
-event code 10000
+For example, create a trigger in the task scheduler for a vpn connection event:  
+Microsoft-Windows-NetworkProfile/Operational  
+event code 10000  
 And the condition is to run only when connected to your network (choose the name of the vpn network)
