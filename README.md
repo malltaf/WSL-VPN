@@ -11,7 +11,7 @@ We need to set MTU 1350 inside WSL on eth0:
 ```Shell
 sudo ifconfig eth0 mtu 1350
 ```
-Or in any other way that suits you. (test on reboot)
+Or in any other way that suits you. Can be added to yours .bashrc.
 
 Then execute the script in PowerShell:
 ```PowerShell
