@@ -41,7 +41,3 @@ Microsoft-Windows-NetworkProfile/Operational
 event code 10000  
 And the condition is to run only when connected to your network (select the name of the vpn network on the Conditions tab).
 
-
-## UPD
-
-It looks like in build 25174 (or earlier) on Windows 11 the problem with WSL is fixed, and the script is no longer needed.
